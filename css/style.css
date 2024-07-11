@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+/* Con import se vincula a las fuentes de Google */
+@import url('fontawesome-free-6.4.2-web/css/all.min.css');
+:root{
+    --color1: #e65a2c;
+    --color2: #ddbd81;
+    --color3: #2ecccc;
+    --color4: #a16447;
+    --color5: #a3a31db9;
+    --color6: #0d806e;
+    --color7: #61876E;
+    --color8: #310569;
+    --color9: #800d50;
+    --color10: #1AD927;
+    --color11: #f21d92;
+    --color12: #ffee00;
+    --color13:rgb(2, 149, 175);
+    --color14: red;
+    --color15: yellow;
+    --color16: blue;
+    --color-blanco: #FFFFFF;
+    --color-negro: #000000;
+    --color-gris-oscuro: #333333;
+    --color-gris-claro: #CCCCCC;
+}
+
+body{/* Asi se define una regla de estilos para objetos por su etiqueta */
+    font-family: 'Jost', sans-serif;/* Tipo de fuente */
+    font-size: 18px;
+    line-height: 1.5em;/* em es una unidad relativa porcentual 
+    respecto al tamaño de la fuente */
+    /* line-height es el alto de la línea o interlineado */    
+    margin: 0;
+}
+
+img{
+    display: block; /* Elimina el espacio inferior de la imagen */
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;/* Elimina los márgenes por defecto de los encabezados */
+    line-height: 1.2em;
+    font-family: 'Bitter', serif;
+}
+h1{
+    font-size: 64px;/* tamaño de la letra en pixeles */
+    font-weight: 900;/* grosor de la letra */
+    letter-spacing: -4px;/* espaciado entre letras */
+}
+h2{
+    font-size: 48px;
+    font-weight: 200;
+    text-transform: lowercase; /* Muestra las letras en minúscula */
+    letter-spacing: -3px;
+    margin-bottom: 0.5em;
+    position: relative;
+}
+h2::before{
+    content: "";
+    width: 100px;
+    height: 3px;
+    background-color: var(--color10);
+    position: absolute;
+    bottom: -10px;
+}
+#ejecutivos h2::before,
+#valores h2::before,
+#colaboradores h2::before{
+left: calc(50% - 50px);
+}
+h3{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase; /* Muestra las letras en mayúscula */
+    margin-bottom: 0.75em;
+}
+
+/* Hipervínculos ******** *********/
+a{
+    color: var( --color1);
+    text-decoration: none;
+}
+
+#main-header{/* Asi se define una regla de estilos para objetos por su id
+    (empieza con #) */
+    background-color: var(--color1); /* Color de fondo */
+    color: var(--color-blanco); /* Color de texto */
+}
+#main-header p{/* El espacio significa dentro de */
+    margin-bottom: 0;
+}
+#main-banner{
+    position: relative;
+}
+#main-banner-descripcion {
+    color: var(--color5);
+    position: absolute;
+    bottom: -60px;
+    width: 40%;
+    background: var(--color-blanco);
+    padding: 30px;
+    box-sizing: border-box;
+    left: 30%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(255, 0, 191, 0.5);
+}
+#nosotros{
+    background-color: var(--color-negro);
+    color: var(--color-gris-claro);
+}
+#nosotros h2{
+    margin-top: 20%;
+    font-size: 84px;
+    font-weight: 900;
+    line-height: 0.95em;
+    background-image: url(../images/fondo-nosotros.jpg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+}
+#menu{
+    background-color: var(--color3);
+}
+#menu a{
+    color: var(--color12);
+    text-decoration: underline;
+}
+#menu h3 {
+    background: linear-gradient(90deg, var(--color8) 0%, var(--color5) 35%, var(--color11) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#menu .col{
+    border: solid 1px var(--color-gris-oscuro);;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+#menu img{
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border-bottom: solid 5px var(--color5);
+}
+
+#mas-vendido{
+    background-color: var(--color4);
+}
+#mas-vendido img{
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border-bottom: solid 5px var(--color5);
+}
+
+#aquario{
+    background-image: url("../images/aquario.jpg");
+    background-size: cover;
+    background-position: right center;
+    color: var(--color-gris-claro);
+}
+
+#bebidas{
+    background-color: var(--color6);
+    color: var(--color-blanco);
+    position: relative;
+}
+#bebidas a{
+    color: var(--color12);
+    text-decoration: none;
+}
+#bebidas h3 {
+    background: linear-gradient(90deg, var(--color8) 0%, var(--color3) 35%, var(--color10) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#bebidas .col{
+    border: solid 10px rgba(255, 255, 255, 0.2);
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 15px;
+    border-radius: 15px 0;
+    box-shadow: 0 5px 10px var(--color-gris-oscuro);
+    border-image: linear-gradient(60deg, var(--color8) 0%, var(--color10) 100%) 1;
+}
+
+#empresa{
+    background-color: var(--color9);
+    color: var(--color-blanco);
+}
+
+#historia{
+    background-color: var(--color5);
+    color: var(--color-blanco);
+}
+
+#ejecutivos {
+    background-color: var(--color-gris-oscuro);
+    color: var(--color-blanco);
+    text-align: center;
+}
+#ejecutivos img{
+    border: solid var(--color-gris-claro) 1px;
+    padding: 10px;
+    border-radius: 300px 300px 0 0;
+    margin-bottom: 15px;
+}
+
+#logros{
+    text-align: center;
+    color: var(--color-blanco);
+    background-color: var(--color8);
+}
+
+#conferencia{
+    background-color: var(--color-negro);
+    color: var(--color-gris-claro);
+}
+#conferencia img{
+    margin-top: -50px;
+    margin-bottom: -50px;
+}
+#eventos{
+    background-color: var(--color9);
+    position: relative;
+}
+#eventos img{
+    margin-bottom: 20px;
+    border-radius: 15px 0 0 0;
+    box-shadow: 10px 10px var(--color11);
+}
+
+#aviso{
+    background-image: url("../images/auto-escuela.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: left;
+    color: var(--color-blanco);
+}
+#aviso .mega-texto{
+    text-shadow: 3px 3px var(--color-negro);
+}
+
+#galeria{
+    background: linear-gradient(90deg, var(--color14) 3%, var(--color15) 60%, var(--color16) 90%);
+}
+
+#galeria .col{
+    padding: 0px;
+    position: relative;
+}
+
+.mascotas{
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(5, 177, 189, 0.5);
+    color: var(--color-gris-oscuro);
+    padding: 5px 10px;
+}
+
+#valores{
+    text-align: center;
+    color: var(--color2);
+    background-color: var(--color8);
+}
+
+#valores i{
+    color: var(--color2);
+    margin-bottom: 20px;
+    border: solid;
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    width: 1.2em;
+    height: 1.2em;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(90deg, var(--color8) 0%, var(--color3) 35%, var(--color10) 70%);
+}
+
+#reserva{
+    background-color: var(--color7);
+    color: var(--color-blanco);
+}
+
+#colaboradores{
+    text-align: center;
+    color: var(--color-blanco);
+    background: linear-gradient(90deg, var(--color8), var(--color3), var(--color10));
+}
+
+#colaboradores img {
+    margin-bottom: 15px;
+    border-radius: 50%;
+}
+#estado .col{
+    border: solid 1px var(--color-gris-claro);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    margin: 15px;
+    flex-basis: calc(20% - 30px);
+}
+#main-footer{
+    background-color: var(--color-gris-oscuro);
+    color: var(--color-gris-claro);
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+.padded{/* Asi se define una regla de estilos para una clase
+    (empieza con .) */
+    /*
+    Una clase se puede usar varias veces
+    En cambio el id es único, no se debe repetir
+    */
+    padding-top: 90px; /* padding es la distancia del borde al contenido */
+    padding-bottom: 90px;
+}
+.container{
+    max-width: 1200px;/* Ancho máximo */
+    margin-left: auto;
+    margin-right: auto;
+    /* Al ser el margen izquierdo y derecho auto, ambos son iguales
+    y se ve la caja centrada */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.row{
+    display: flex; /* Por defecto acomoda las cajas que contiene 
+    directamente una al costado del otro */
+    margin-left: -15px;
+    margin-right: -15px;
+    flex-wrap: wrap;
+
+}
+.col{
+    flex-basis: 0;
+    flex-grow: 1;
+    /* Ambas propiedades son para que las cajas tengan el mismo ancho */
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box; /* Hace que el padding no incremente el ancho */
+}
+.col-33{
+    flex-basis: 33.33%;
+    max-width: 33.33%;
+}
+.col-50{
+    flex-basis: 50%;
+    max-width: 50%;
+}
+.col-75{
+    flex-basis: 75%;
+    max-width: 75%;
+}
+.col-16_67{
+    flex-basis: 16.66%;
+    max-width: 16.66%;
+}
+.col-20{
+    flex-basis: 20%;
+    max-width: 20%;
+}
+.img-fluid{
+    max-width: 100%; /* Para que el ancho de la imagen sea
+    como màximo el ancho de su contenedor */
+}
+.centrado-vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mega-texto{
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 0.8em;
+    letter-spacing: -4px;
+    text-shadow: 3px 3px var(--color11);
+}
+.texto-importante{
+    color:var(--color10);
+}
+.letra-enorme{
+    font-size: 72px;
+    font-weight: 900;
+    -webkit-text-stroke-color: var(--color10);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: transparent;
+    font-family: Arial;
+}
+.contenedor-foto{
+    position: relative;
+}
+.descripcion-foto{
+    position: absolute;
+    top: 0;
+    left: 15px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+    height: 100%;
+    width: calc(100% - 30px);
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+}
+.contenedor-foto-evento{
+    position: relative;
+}
+.texto-foto-evento{
+    position: absolute;
+    background-color: var(--color5);
+    padding: 10px;
+    top: 10px;
+    right: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+.imagen-proyecto{
+    position: relative;
+    overflow: hidden;/*oculta lo que sobresale del rectangulo de la imagen*/
+}
+.texto-imagen-proyecto{
+    position: absolute;
+    top: 40px;
+    background-color: var(--color13);
+    color: var(--color-blanco);
+    padding: 10px 15px;
+    transform: rotate(45deg);
+    width: 300px;
+    text-align: center;
+    right: -80px;
+}
+.texto-fondo{
+    font-size: 72px;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: absolute;
+    transform: rotate(270deg);
+    top: 200px;
+    opacity:0.3;
+}
+#proyecto{
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+}
+.proyecto{
+    position: relative;
+}
+.proyecto::before{
+    content:" ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color10);
+    left: -20px;
+    top: 8px;
+    border-radius: 50%;
+}
+.proyecto::after{
+    content:" ";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: var(--color10);
+    left: -15px;
+    top: 25px;
+}
+.vinculo-boton{
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    width: fit-content;
+    padding: 5px 15px;
+    border-radius: 19px;
+    border: solid 2px;
+}
+#estado{
+    background-color: var(--color-blanco);
+}
